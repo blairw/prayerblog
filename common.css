@@ -55,9 +55,11 @@ p {
 }
 
 #aboutBlogDescription {
-	font-size: 90%;
+	font-size: 120%;
 	margin: 24pt;
+	padding-bottom: 16pt;
 }
 #creditsText {
+	text-align: justify;
 	font-size: 75%;
 }

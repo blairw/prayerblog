@@ -58,6 +58,7 @@ p {
 	font-size: 120%;
 	margin: 24pt;
 	padding-bottom: 16pt;
+	text-align: justify;
 }
 #creditsText {
 	text-align: justify;

@@ -1,0 +1,63 @@
+.prayerblogWrapper {
+	background-color: white;
+	width: 100%;
+	padding: 20px;
+	box-shadow: 0 0 4em 2em rgba(0,0,0,0.05);
+}
+
+h1, h2 {
+	font-weight: bold;
+	margin-bottom: 16px;
+}
+
+body {
+	margin: 0 auto;
+	max-width: 600px;
+	background-image: url('frameworks/subtlepatterns/symphony/symphony.png');
+	background-attachment: fixed;
+}
+
+p {	
+	font-size: 12pt;
+}
+
+.forceCenter {
+	text-align: center;
+}
+.prayer_text {
+	text-align: justify;
+	margin: 24pt;
+}
+
+.create_ts {
+	background-color: rgba(100,100,100,0.2);
+	color: rgb(100,100,100);
+}
+
+.prayerPrivate {
+	color: rgb(200,0,0);
+	background-color: rgba(200,0,0,0.2);
+}
+
+.prayerPublic {
+	color: rgb(0,150,0);
+	background-color: rgba(0,150,0,0.2);
+}
+
+.prayerPrivate, .create_ts, .prayerPublic {
+	padding: 4px 6px;
+	border-radius: 4px;
+}
+
+.prayerSegment {
+	border-top: 1px dotted lightgray;
+	padding-bottom: 50px;
+}
+
+#aboutBlogDescription {
+	font-size: 90%;
+	margin: 24pt;
+}
+#creditsText {
+	font-size: 75%;
+}

@@ -24,21 +24,27 @@
 			?>
 			function bodyDidLoad() {
 				$.get("db-getPrayerByUuid.php?id="+getId+"&uuid="+getUuid, function(ajaxResponse) {
-					$("#prayer_title").html(ajaxResponse.prayer_title);
-					$("#prayer_text").html(ajaxResponse.prayer_text);
-					$("#create_ts").html(ajaxResponse.create_ts);
-					if (ajaxResponse.is_public == 1) {
-						$("#is_public").html(
-							"<i class='fa fa-check-square'></i>&nbsp;&nbsp;"
-							+"Public Prayer"
-						);
-						$("#is_public").toggleClass("prayerPublic");
+					if (ajaxResponse.prayer_id != null) {
+						$("#prayer_title").html(ajaxResponse.prayer_title);
+						$("#prayer_text").html(ajaxResponse.prayer_text);
+						$("#create_ts").html(ajaxResponse.create_ts);
+						if (ajaxResponse.is_public == 1) {
+							$("#is_public").html(
+								"<i class='fa fa-check-square'></i>&nbsp;&nbsp;"
+								+"Public Prayer"
+							);
+							$("#is_public").toggleClass("prayerPublic");
+						} else {
+							$("#is_public").html(
+								"<i class='fa fa-exclamation-triangle'></i>&nbsp;&nbsp;"
+								+"Private Prayer"
+							);
+							$("#is_public").toggleClass("prayerPrivate");
+						}
 					} else {
-						$("#is_public").html(
-							"<i class='fa fa-exclamation-triangle'></i>&nbsp;&nbsp;"
-							+"Private Prayer"
-						);
-						$("#is_public").toggleClass("prayerPrivate");
+						$("#prayer_title").html("Invalid Entry!");
+						$("#prayer_text").html("Maybe you were given a bad URL, or maybe the database server tripped over. Yikes! Sorry about that.");
+						$("#prayerAttributesSection").remove();
 					}
 				});
 			}
@@ -54,7 +60,7 @@
 			</button>
 			<div class="forceCenter">
 				<h2 id="prayer_title" class="prayer_title"></h2>
-				<p><span id="is_public" class="is_public"></span>&nbsp;<span id="create_ts" class="create_ts"></span></p>
+				<p id="prayerAttributesSection"><span id="is_public" class="is_public"></span>&nbsp;<span id="create_ts" class="create_ts"></span></p>
 				<p id="prayer_text" class="prayer_text"></p>
 			</div>
 		</div>

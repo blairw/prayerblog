@@ -49,8 +49,8 @@
 	</head>
 	<body onload="bodyDidLoad()">
 		<div class="prayerblogWrapper">
-			<button class="btn btn-sm btn-default" onclick="viewPublicPrayers()">
-				<i class="fa fa-mail-reply"></i>&nbsp;&nbsp;View Public Prayers
+			<button class="btn btn-sm btn-success" onclick="viewPublicPrayers()">
+				<i class="fa fa-mail-reply"></i>&nbsp;&nbsp;View All Public Prayers
 			</button>
 			<div class="forceCenter">
 				<h2 id="prayer_title" class="prayer_title"></h2>

@@ -43,7 +43,7 @@
 				});
 			}
 			function viewPublicPrayers() {
-				document.location = 'index.php';
+				document.location = './';
 			}
 		</script>
 	</head>

@@ -16,6 +16,5 @@ function guid(){
         return $uuid;
     }
 }
-echo guid();
 // http://php.net/manual/en/function.com-create-guid.php
 ?>
